@@ -27,6 +27,7 @@ input[type="checkbox"]#gnbcheck {
   top: 10px;
   right: 10px;
   z-index: 7000;
+  display: none;
 }
 
 #mobile_close_btn::before,
