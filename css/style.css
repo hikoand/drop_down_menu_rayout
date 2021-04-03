@@ -1,0 +1,174 @@
+@charset "UTF-8";
+:root {
+  --dark--bg-color: #322556;
+  --bright--bg-color: #fff370;
+  --middle--bg-color: #dbcf4b;
+  --brown--color: #918f71;
+  --hover-color: #714bdb;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.4rem;
+}
+
+#wrap {
+  position: relative;
+  width: 120rem;
+  min-width: 23rem;
+  margin: 0 auto;
+  background-color: var(--dark--bg-color);
+}
+
+/**header start*/
+
+#wrap .header {
+  position: relative;
+  height: 10rem;
+  background: var(--middle--bg-color);
+}
+
+#wrap .header .logo {
+  position: absolute;
+  width: 15rem;
+  height: 10rem;
+  line-height: 10rem;
+  top: 0;
+  left: 0;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  background: var(--dark--bg-color);
+}
+
+#wrap .header .gnb {
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+}
+
+#wrap .header .gnb .mainmenu {
+  position: relative;
+  width: 80rem;
+  height: 6rem;
+  background: var(--dark--bg-color);
+}
+
+#wrap .header .gnb .mainmenu > li {
+  position: relative;
+  float: left;
+  width: 25%;
+}
+#wrap .header .gnb ul.mainmenu > li > a {
+  position: relative;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 6rem;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.5s;
+}
+
+#wrap .header .gnb ul.mainmenu > li:hover > a {
+  background: var(--hover-color);
+}
+
+#wrap .header .gnb ul.mainmenu > li:hover > ul.submenu {
+  display: block;
+}
+
+.mainmenu .submenu {
+  position: relative;
+  background: var(--dark--bg-color);
+  display: none;
+}
+
+.mainmenu .submenu li a {
+  display: block;
+  line-height: 4rem;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+  transition: background 0.5s;
+}
+
+.mainmenu .submenu li a:hover {
+  background: var(--hover-color);
+}
+
+/**header end*/
+
+/*main start*/
+.main .slide {
+  height: 30rem;
+  background: var(--brown--color);
+}
+
+.main .board {
+  background: var(--bright--bg-color);
+  overflow: hidden;
+}
+
+.main .board > div {
+  width: calc(100% / 3);
+  height: 20rem;
+  float: left;
+  text-align: center;
+  line-height: 20rem;
+}
+
+.main .board .notice {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.main .board .gallery {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.main .board .banner {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/*main end*/
+
+/*footer start*/
+
+#wrap .footer {
+  overflow: hidden;
+}
+
+#wrap .footer > div {
+  height: 10rem;
+  float: left;
+}
+
+#wrap .footer .f_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  background: var(--dark--bg-color);
+}
+
+#wrap .footer .f_left a {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#wrap .footer .f_right {
+  width: 85%;
+  background: darkslateblue;
+}
+
+#wrap .footer .f_right .f_menu {
+  height: 5rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#wrap .footer .f_right .f_copy {
+  height: 5rem;
+  background: rgba(255, 255, 255, 0.2);
+}
