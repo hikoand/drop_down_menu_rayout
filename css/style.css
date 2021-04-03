@@ -14,6 +14,67 @@ body {
   font-size: 1.4rem;
 }
 
+/*mobile btn start*/
+input[type="checkbox"]#gnbcheck {
+  display: none;
+}
+
+/*mobile close btn*/
+#mobile_close_btn {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 10px;
+  right: 10px;
+  z-index: 7000;
+}
+
+#mobile_close_btn::before,
+#mobile_close_btn::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 1.6px;
+  top: 16px;
+  background: #fff;
+}
+
+#mobile_close_btn::before {
+  transform: rotate(40deg);
+}
+
+#mobile_close_btn::after {
+  transform: rotate(-40deg);
+}
+
+/*mobile gnb btn*/
+#gnbbtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  z-index: 6000;
+  display: none;
+}
+
+#gnbbtn span {
+  position: absolute;
+  width: 32px;
+  height: 1.6px;
+  top: 16px;
+  transform: translateY(50%);
+  background: #fff;
+}
+
+#gnbbtn span:nth-child(1) {
+  top: 8px;
+}
+#gnbbtn span:nth-child(2) {
+  top: 24px;
+}
+/*mobile btn end*/
+
 #wrap {
   position: relative;
   width: 120rem;
@@ -47,6 +108,7 @@ body {
   position: absolute;
   right: 1rem;
   top: 2rem;
+  z-index: 7000;
 }
 
 #wrap .header .gnb .mainmenu {
@@ -171,4 +233,64 @@ body {
 #wrap .footer .f_right .f_copy {
   height: 5rem;
   background: rgba(255, 255, 255, 0.2);
+}
+/*footer start end*/
+
+/*화면 구간별 대응*/
+/*1200px, 1024px, 960px*/
+
+@media all and (max-width: 1200px) {
+  #wrap {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 960px) {
+  input[type="checkbox"]#gnbcheck:checked ~ .header .gnb {
+    left: 0;
+  }
+
+  #mobile_close_btn {
+    display: block;
+  }
+
+  #gnbbtn {
+    display: block;
+  }
+
+  #wrap .header .gnb {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    left: -100%;
+    background: rgba(0, 0, 0, 0.8);
+    transition: 0.5s ease-in-out;
+  }
+  #wrap .header .gnb ul.mainmenu {
+    padding-top: 50px;
+    width: 100%;
+  }
+
+  #wrap .header .gnb ul.mainmenu li {
+    width: 100%;
+  }
+
+  #wrap .header .gnb ul.mainmenu > li > a {
+    font-size: 3rem;
+  }
+  .submenu li a {
+    font-size: 2rem;
+    line-height: 6rem;
+  }
+}
+
+@media all and (max-width: 480px) {
+  html {
+    font-size: 6px;
+  }
+  .main .board .notice,
+  .main .board .gallery {
+    width: 100%;
+  }
 }
